@@ -1,0 +1,21 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="company.interface">
+    <method name="candidateName">
+      <arg type="s" direction="out"/>
+      <arg name="name" type="s" direction="in"/>
+    </method>
+    <method name="candidateAge">
+      <arg type="i" direction="out"/>
+      <arg name="age" type="i" direction="in"/>
+    </method>
+    <method name="candidateProfession">
+      <arg type="s" direction="out"/>
+      <arg name="profession" type="s" direction="in"/>
+    </method>
+    <method name="candidateExpectSalary">
+      <arg type="d" direction="out"/>
+      <arg name="salary" type="d" direction="in"/>
+    </method>
+  </interface>
+</node>
