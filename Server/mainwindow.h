@@ -22,6 +22,7 @@ public slots:
     void nameChangedSlot();
     void professionChangedSlot();
     void salaryChangeSlot();
+    void recuritChangeSlot();
 private:
     Ui::MainWindow *ui;
     company m_company;

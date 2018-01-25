@@ -37,6 +37,8 @@ double company::candidateExpectSalary(double salary){
     emit salaryChangedSingal();
     return salary;
 }
+
+
 int company::getUsrAge(){
     return usr_age;
 }

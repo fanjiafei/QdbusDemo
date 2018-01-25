@@ -8,8 +8,8 @@
  * Do not edit! All changes made to it will be lost.
  */
 
-#ifndef COMPANYINTERFACE_H_1516352721
-#define COMPANYINTERFACE_H_1516352721
+#ifndef COMPANYINTERFACE_H_1516854372
+#define COMPANYINTERFACE_H_1516854372
 
 #include <QtCore/QObject>
 #include <QtCore/QByteArray>
@@ -65,6 +65,11 @@ public Q_SLOTS: // METHODS
     }
 
 Q_SIGNALS: // SIGNALS
+    void ageChangedSingal();
+    void nameChangedSingal();
+    void professionChangedSingal();
+    void recruitInfo(const QString &name, const QString &result);
+    void salaryChangedSingal();
 };
 
 namespace company {

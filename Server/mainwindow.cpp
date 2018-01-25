@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&m_company,SIGNAL(nameChangedSingal()),this,SLOT(nameChangedSlot()));
     connect(&m_company,SIGNAL(professionChangedSingal()),this,SLOT(professionChangedSlot()));
     connect(&m_company,SIGNAL(salaryChangedSingal()),this,SLOT(salaryChangeSlot()));
-
+    connect(this->ui->resultLine,SIGNAL(editingFinished()),this,SLOT(recuritChangeSlot()));
 
     //new connection
     QDBusConnection connection = QDBusConnection::sessionBus();
@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //registe object
     connection.registerObject("/company/path",&m_company,
-                                   QDBusConnection::ExportAllSlots);
+                                   QDBusConnection::ExportAllContents);
 
     setWindowTitle("companyRecuitmentSystem");
 }
@@ -49,4 +49,8 @@ void MainWindow::salaryChangeSlot(){
 void MainWindow::professionChangedSlot(){
     qDebug()<<"profession changed slot";
     ui->professionline->setText(m_company.gerUsrProfession());
+}
+void MainWindow::recuritChangeSlot(){
+    qDebug()<<"recurit changed slot";
+    emit m_company.recruitInfo(m_company.getUsrName(),this->ui->resultLine->text());
 }

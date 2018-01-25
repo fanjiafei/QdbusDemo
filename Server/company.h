@@ -21,6 +21,7 @@ signals:
     void ageChangedSingal();
     void professionChangedSingal();
     void salaryChangedSingal();
+    void recruitInfo(const QString& name ,const QString& result);
 
 public slots:
     QString candidateName(QString name);

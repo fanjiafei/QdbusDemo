@@ -16,6 +16,7 @@ public:
 signals:
 
 public slots:
+    void recruitInfoSlot(const QString &usr_name,const QString& info);
 };
 
 #endif // CANDIDATE_H

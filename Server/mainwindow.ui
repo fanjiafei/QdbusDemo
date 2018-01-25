@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
-    <height>376</height>
+    <width>605</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -119,13 +119,49 @@
      <string>Company HR System</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>300</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>send</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>290</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>result</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="resultLine">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>280</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>585</width>
+     <width>605</width>
      <height>22</height>
     </rect>
    </property>

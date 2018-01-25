@@ -2,12 +2,20 @@
 
 candidate::candidate(QObject *parent) : QObject(parent)
 {
-
+    company::interface *p_company;
+    p_company = new company::interface("company.recruitment","/company/path",
+                                 QDBusConnection::sessionBus());
+    connect(p_company,SIGNAL(recruitInfo(QString, QString)),
+            this,SLOT(recruitInfoSlot(QString ,QString)));
 }
 
 candidate::~candidate()
 {
 
+}
+void candidate::recruitInfoSlot(const QString &usr_name,const QString& info){
+    qDebug()<<"-------------";
+    qDebug()<<"candidate's name is "<<usr_name<<" recruit result "<<info;
 }
 
 void candidate::setCandidateName(QString name){
